@@ -44,24 +44,52 @@ h2 {
     max-width: 60%;
 }
 
-/*  flex-container idea is taken from  https://www.w3schools.com/*/
+/*  flex-container idea is taken from  https://www.w3schools.com/ and adjusted to the project needs*/
 
 .flex-container {
     display: flex;
-    background-color: DodgerBlue;
-  }
-  
-  .flex-container > div {
+    background-color: dodgerblue;
+}
+
+.flex-container>div {
     background-color: #f1f1f1;
     margin: 10px;
     padding: 20px;
     font-size: 30px;
-  }
+}
 
-  .footer {
-    background-color: #26083f;
+.question-area {
+    flex-basis: 50%;
+    padding: 20px;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+
+.left-images, .right-images {
+    flex-basis: 24%;
+    padding: 20px;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: rgb(22, 53, 71);
     height: 80px;
     padding: 10px;
     color: whitesmoke;
-  }
-  
+}
+
+
+
+@media (max-width: 800px) {
+
+    .flex-container {
+        flex-direction: column;
+    }  
+
+    .flex-container>div {
+    flex-direction: column;
+}
+
+}
+
