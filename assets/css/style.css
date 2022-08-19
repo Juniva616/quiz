@@ -57,3 +57,11 @@ h2 {
     padding: 20px;
     font-size: 30px;
   }
+
+  .footer {
+    background-color: #26083f;
+    height: 80px;
+    padding: 10px;
+    color: whitesmoke;
+  }
+  
