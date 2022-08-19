@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,400&family=Ubuntu&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: x-large;
+    color: #26083f;
+}
+
 .header-bg {
-    background-image: url(../images/header-bg.jpg); 
+    background-image: url(../images/header-bg.jpg);
     background-color: rgb(79, 37, 107);
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,20 +22,38 @@
     text-align: center;
 }
 
-h1 {
+h1,
+h2 {
+    letter-spacing: 5px;
+    color: white;
+    font-size: 300%;
     padding: 40px;
 }
 
-h1, h2 {
+#header {
     font-family: Ubuntu, sans-serif;
-    letter-spacing: 4px;
-    color: white;
-    font-size: xxx-large;
 }
 
-.logo-quiz {
+.header-bottom {
     text-align: center;
-    color: white;
     font-family: 'Source Sans Pro', sans-serif;
 }
- 
+
+.button-area {
+    box-sizing: border-box;
+    max-width: 60%;
+}
+
+/*  flex-container idea is taken from  https://www.w3schools.com/*/
+
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
