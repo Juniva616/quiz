@@ -39,6 +39,7 @@ h2 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* Style of button-area and buttons is taken from outer source https://juniva616.github.io/milestone-1/index.html */
 .button-area {
     box-sizing: border-box;
     max-width: 50%;
@@ -52,7 +53,7 @@ h2 {
 }
  
 .button {
-    width: 100px;
+    max-width: 100px;
     border-radius: 6px;
     padding: 12px 20px;
     background: #064e1c;
@@ -86,7 +87,7 @@ h2 {
     margin-top: 0;   
 }
 
-.left-images, .right-images {
+#left-images, #right-images {
     flex-basis: 21%;
     padding: 20px;
     margin-top: 0;
@@ -99,7 +100,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 80px;
+    height: 100px;
 }
 
 /*  The score-area in the footer */
@@ -115,7 +116,7 @@ h2 {
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
     color: yellow;
-    padding: 25px;
+    padding: 20px;
 }
 
 /* Media queries  for the screen less than 800px */
