@@ -85,13 +85,14 @@ h2 {
 
 /*  The score-area in the footer */
 .score-area {
+    display: flex;
     margin: 5px auto;
-    width: 60%;
+    max-width: 50%;
     font-size: 2rem;
 }   
 
 .scores {
-    display: inline-block;
+    justify-content: center;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
     color: yellow;
