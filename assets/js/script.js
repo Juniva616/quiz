@@ -7,4 +7,4 @@ const quizArray = {
     },
 }
 
-document.getElementById('question').innerText = quizArray.statement;
+//document.getElementById('question').innerText = quizArray.statement;
