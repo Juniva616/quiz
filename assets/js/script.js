@@ -1,5 +1,3 @@
-alert("Are you ready to test your knowledge?  Make your choice and press the button 'True' if you think it is true or 'False' if you think it is not a true statement. Let's START! ");
-
 const quizArray = {
     statement: 'Male lions do 90 percent of the hunting.',
     correctAnswer: 'false',
