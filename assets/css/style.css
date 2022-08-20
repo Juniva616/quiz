@@ -106,7 +106,7 @@ h2 {
 /*  The score-area in the footer */
 .score-area {
     display: flex;
-    margin: 5px auto;
+    margin: 0 auto; 
     max-width: 50%;
     font-size: 2rem;
 }   
@@ -129,6 +129,14 @@ h2 {
     .flex-container>div {
     flex-direction: column;
 }
+}
+
+
+/* Media queries  for the screen less than 1155px */
+@media (max-width: 1080px) {
+    .button {
+        max-width: auto;
+    }
 }
 
 /* Media queries  for the screen less than 1155px */

@@ -2,7 +2,7 @@ const quizArray = [
     
         {statement: 'Male lions do 90 percent of the hunting.',
     correctAnswer: 'false',
-    imgFile: 'url(../assets/images/lions.jpg)',
+    imgFile: '<img src="assets/images/lions.jpg" alt="Lions" aria-labelledby="Lions">',
     textInfo: ' Lionesses, not male lions, do the majority of hunting for their pride. Lionesses hunt around 90 percent of the time, while the males protect their pride."', 
     displayInfo: function() {
         return this.imgFile + " " + this.textInfo;
@@ -20,8 +20,8 @@ const quizArray = [
 },
 ]
 
-document.getElementById('question').innerText = quizArray[1].statement;
-document.getElementById('left-images').innerHTML = quizArray[1].imgFile;
+document.getElementById('question').innerText = quizArray[0].statement;
+document.getElementById('left-images').innerHTML = quizArray[0].imgFile;
 
  
 
