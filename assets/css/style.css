@@ -6,6 +6,7 @@
 }
 
 .body {
+    background-color: bisque;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: x-large;
@@ -37,6 +38,13 @@ h2 {
 .header-bottom {
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+#question {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+
 }
 
 /* Style of button-area and buttons is taken from outer source https://juniva616.github.io/milestone-1/index.html */
@@ -132,7 +140,7 @@ h2 {
 }
 
 
-/* Media queries  for the screen less than 1155px */
+/* Media queries  for the screen less than 1080px */
 @media (max-width: 1080px) {
     .button {
         max-width: auto;
