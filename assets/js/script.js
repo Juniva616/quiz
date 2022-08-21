@@ -1,3 +1,26 @@
+//Waits for the DOM to finish loading before starting the quiz.
+//Replaces the welcoming message and Start button with the Quiz statement and True and False buttons
+//in index.html.
+
+document.addEventListener("DOMContentLoaded", function() {
+  
+let startButton = document.getElementById("start-button");
+startButton.addEventListener('click', function() {
+
+  document.getElementById('question').innerText = quizArray[0].statement;
+  document.getElementById('left-images').innerHTML = quizArray[0].imgFile;
+
+  document.getElementById('button-area').innerHTML = `<input class="button" id="true-button" type="submit" value="True">
+
+  </span>
+  <span>
+      <input class="button" id="false-button" type="submit" value="False">
+
+  </span>`;
+  
+})
+});
+
 const quizArray = [
 
   {
@@ -155,8 +178,6 @@ const quizArray = [
 
 ]
 
-//document.getElementById('question').innerText = quizArray[5].statement;
-//document.getElementById('left-images').innerHTML = quizArray[5].imgFile;
 
 
 function runQuiz() {

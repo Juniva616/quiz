@@ -48,7 +48,7 @@ h2 {
 }
 
 /* Style of button-area and buttons is taken from outer source https://juniva616.github.io/milestone-1/index.html */
-.button-area {
+#button-area {
     box-sizing: border-box;
     max-width: 50%;
     border: 1px solid #438f56;
