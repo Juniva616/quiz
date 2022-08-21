@@ -155,10 +155,26 @@ const quizArray = [
 
 ]
 
-document.getElementById('question').innerText = quizArray[5].statement;
-document.getElementById('left-images').innerHTML = quizArray[5].imgFile;
+//document.getElementById('question').innerText = quizArray[5].statement;
+//document.getElementById('left-images').innerHTML = quizArray[5].imgFile;
 
 
+function runQuiz() {
 
-// Display data from the object:
-//document.getElementById("demo").innerHTML = person.fullName();
+}
+
+function checkAnswers() {
+
+}
+
+function incrementCorrect() {
+
+}
+
+function incrementWrong() {
+
+}
+
+function displayQuestion() {
+
+}
