@@ -1,26 +1,3 @@
-//Waits for the DOM to finish loading before starting the quiz.
-//Replaces the welcoming message and Start button with the Quiz statement and True and False buttons
-//in index.html.
-
-document.addEventListener("DOMContentLoaded", function() {
-  
-let startButton = document.getElementById("start-button");
-startButton.addEventListener('click', function() {
-
-  document.getElementById('question').innerText = quizArray[0].statement;
-  document.getElementById('left-images').innerHTML = quizArray[0].imgFile;
-
-  document.getElementById('button-area').innerHTML = `<input class="button" id="true-button" type="submit" value="True">
-
-  </span>
-  <span>
-      <input class="button" id="false-button" type="submit" value="False">
-
-  </span>`;
-  
-})
-});
-
 const quizArray = [
 
   {
@@ -36,13 +13,13 @@ const quizArray = [
     imgFile: '<img src="assets/images/rose.jpg" alt="Rose" aria-labelledby="Rose">',
     textInfo: ' The family of rose plants, in addition to giving us fragrant flowers, give us apples, pears, plums, cherries, almonds, peaches, and apricots."',
   },
- 
+
   {
     statement: 'Crabs cannot growl.',
     correctAnswer: 'false',
     imgFile: '<img src="assets/images/crab.jpg" alt=" A Crab" aria-labelledby="A crab ">',
     textInfo: "Crabs may be able to intimidate other creatures with their claws, but if that's not enough, ghost crabs will growl at their enemies like a dog. However, unlike our canine friends, crabs make these fearsome noises using teeth located in their stomachs.",
-    
+
   },
   {
     statement: "The baobab tree can store  up to 120,000 liters of water in its trunk.",
@@ -178,24 +155,77 @@ const quizArray = [
 
 ]
 
+//Waits for the DOM to finish loading before starting the quiz and run function(), which
+//replaces the welcoming message and the Start button with the Quiz statement and True and False buttons
+//in index.html.
+
+document.addEventListener("DOMContentLoaded", function () {
+
+      let startButton = document.getElementById("start-button");
+      startButton.addEventListener('click', runQuiz);
+ });
+    //     document.getElementById('question').innerText = quizArray[0].statement;
+    //     document.getElementById('left-images').innerHTML = quizArray[0].imgFile;
+
+    //     document.getElementById('button-area').innerHTML = `<input class="button" id="true-button" type="submit" value="True">
+
+    //    </span>
+    //    <span>
+    //       <input class="button" id="false-button" type="submit" value="False">
+
+    //   </span>`;  
+    //  })
+    //  });
+
+    /** Adds EventListeners to buttons True and False 
+     * and call for checkAnswers(); */
+
+    function runQuiz() {
+ 
+     let i = 0;
+        document.getElementById('question').innerText = quizArray[i].statement;
+        document.getElementById('left-images').innerHTML = quizArray[i].imgFile;
+
+        document.getElementById('button-area').innerHTML =
+          `<input class="button" id="true-button" type="submit" value="True">
+  </span>
+  <span>
+      <input class="button" id="false-button" type="submit" value="False">
+  </span>`;
+     
+      checkAnswers();
+    }
 
 
-function runQuiz() {
+    function checkAnswers() {
+      // listen to buttons
+      document.getElementById('true-button').addEventListener('click', function () {
+        let userAnswer = 'true';
+      });
+      document.getElementById('false-button').addEventListener('click', function () {
+        let userAnswer = 'false';
+      });
+      let message = quizArray[i].correctAnswer === userAnswer ? "You are right!" : "Sorry, you are wrong!";
+      alert(message);
+      
+      // checkAnswers, 
+      // give feedback
+      // display textInfo s next
+      // call increment func
+      // increase num of quest, check num of quest
+      // return number of question
 
-}
+    }
 
-function checkAnswers() {
 
-}
+    function incrementCorrect() {
 
-function incrementCorrect() {
+    }
 
-}
+    function incrementWrong() {
 
-function incrementWrong() {
+    }
 
-}
+    function displayResults() {
 
-function displayQuestion() {
-
-}
+    }
