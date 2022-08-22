@@ -5,14 +5,14 @@ const quizArray = [
     statement: 'Male lions do 90 percent of the hunting.',
     correctAnswer: false,
     imgFile: '<img src="assets/images/lions.jpg" alt="Lions" aria-labelledby="Lions">',
-    textInfo: ' Lionesses, not male lions, do the majority of hunting for their pride. Lionesses hunt around 90 percent of the time, while the males protect their pride."',
+    textInfo: ' Lionesses, not male lions, do the majority of hunting for their pride. Lionesses hunt around 90 percent of the time, while the males protect their pride.',
   },
 
   {
     statement: 'Roses and apples belong to the same family.',
     correctAnswer: true,
     imgFile: '<img src="assets/images/rose.jpg" alt="Rose" aria-labelledby="Rose">',
-    textInfo: ' The family of rose plants, in addition to giving us fragrant flowers, give us apples, pears, plums, cherries, almonds, peaches, and apricots."',
+    textInfo: ' The family of rose plants, in addition to giving us fragrant flowers, give us apples, pears, plums, cherries, almonds, peaches, and apricots.',
   },
 
   {
@@ -39,7 +39,7 @@ const quizArray = [
     statement: "Tigers have striped skin.",
     correctAnswer: true,
     imgFile: '<img src="assets/images/tiger.jpg" alt="Tiger " aria-labelledby="Tiger ">',
-    textInfo: "You might think it's just their fur, but no, tigers have striped skin. And speaking of those stripes, much like our fingerprints, they're unique to every tiger.",
+    textInfo: "You might think it is just their fur, but no, tigers have striped skin. And speaking of those stripes, much like our fingerprints, they are unique to every tiger.",
   },
 
   {
@@ -95,7 +95,7 @@ const quizArray = [
     statement: "Koalas sleep very little.",
     correctAnswer: false,
     imgFile: '<img src="assets/images/koala.jpg" alt=" Koala" aria-labelledby="Koala ">',
-    textInfo: " These cuties sleep between 18 and 22 hours a day. The koalas' diets require a lot of energy to digest, which is why they've got to nap so much.",
+    textInfo: " These cuties sleep between 18 and 22 hours a day. The diet of koalas requires a lot of energy to digest, which is why they've got to nap so much.",
   },
 
   {
@@ -174,10 +174,10 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
         document.getElementById('left-images').innerHTML = quizArray[i].imgFile;
 
         document.getElementById('button-area').innerHTML =
-          `<input class="button" id="true-button" type="submit" value = True>
+          `<input class="button" id="true-button" type="submit" value = "True">
   </span>
   <span>
-      <input class="button" id="false-button" type="submit" value = False>
+      <input class="button" id="false-button" type="submit" value = "False">
   </span>`;
  
       checkAnswers();
@@ -200,10 +200,22 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
 
       //Replace statement to textInfo in html
       document.getElementById('question').innerText = quizArray[i].textInfo;
+
       //Replace buttons True and False to the button Next
       document.getElementById('button-area').innerHTML =
-      `<input class="button" id="next-button" type="submit" value = Next>
+      `<input class="button" id="next-button" type="submit" value = "Next">
 </span>`;
+
+document.getElementById('next-button').addEventListener('click', function () {
+  if (i < quizArray.length)  {
+    i++;
+    showQuestion(i);
+  } else {
+    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done! Game is Over!`;
+
+  }
+  
+ });
        });
 
 //If false button is clicked, show message, then show textInfo
@@ -220,18 +232,21 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
       document.getElementById('question').innerText = quizArray[i].textInfo;
       //Replace buttons True and False to the button Next
       document.getElementById('button-area').innerHTML =
-      `<input class="button" id="next-button" type="submit" value = Next>
+      `<input class="button" id="next-button" type="submit" value = "Next">
 </span>`;
+
+document.getElementById('next-button').addEventListener('click', function () {
+  if (i < quizArray.length)  {
+    i++;
+    showQuestion(i);
+  } else {
+    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done! Game is Over!`;
+
+  }
+  
+ });
       });
       
-      document.getElementById('next-button').addEventListener('click', function () {
-        if (i < quizArray.length)  {
-          i++;
-        } else {
-          document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done! Game is Over!`;
-
-        }
-        
-       });
+      
 
       }
