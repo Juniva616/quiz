@@ -186,36 +186,52 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
 
 // Adds EventListeners to buttons True and False 
     function checkAnswers() {
-      // listen to buttons
-     let userAnswer;
+      let userAnswer = true;
+      
+//If true button is clicked, show message, then show textInfo
+
       document.getElementById('true-button').addEventListener('click', function () {
-        userAnswer = true;
-        let message = quizArray[i].correctAnswer === userAnswer ? "You are right!" : "Sorry, you are wrong!";
+       
+      let message = quizArray[i].correctAnswer === userAnswer ? "You are right!" : "Sorry, you are wrong!";
       alert(message);
-      });
+
+      let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
+      document.getElementById("correct").innerText = correctScore;
+
+      //Replace statement to textInfo in html
+      document.getElementById('question').innerText = quizArray[i].textInfo;
+      //Replace buttons True and False to the button Next
+      document.getElementById('button-area').innerHTML =
+      `<input class="button" id="next-button" type="submit" value = Next>
+</span>`;
+       });
+
+//If false button is clicked, show message, then show textInfo
+
       document.getElementById('false-button').addEventListener('click', function () {
          userAnswer = false;
+        let message = quizArray[i].correctAnswer === userAnswer ? "You are right!" : "Sorry, you are wrong!";
+      alert(message);
+
+      let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
+      document.getElementById("wrong").innerText = wrongScore;
+
+      //Replace statement to textInfo in html
+      document.getElementById('question').innerText = quizArray[i].textInfo;
+      //Replace buttons True and False to the button Next
+      document.getElementById('button-area').innerHTML =
+      `<input class="button" id="next-button" type="submit" value = Next>
+</span>`;
       });
       
-      
-      // checkAnswers, 
-      // give feedback
-      // display textInfo s next
-      // call increment func
-      // increase num of quest, check num of quest
-      // return number of question
+      document.getElementById('next-button').addEventListener('click', function () {
+        if (i < quizArray.length)  {
+          i++;
+        } else {
+          document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done! Game is Over!`;
 
-    }
+        }
+        
+       });
 
-
-    function incrementCorrect() {
-
-    }
-
-    function incrementWrong() {
-
-    }
-
-    function displayResults() {
-
-    }
+      }
