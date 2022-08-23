@@ -215,6 +215,7 @@ document.getElementById('true-button').addEventListener('click', function () {
 //Here we check if the quizArray is not ended yet
 document.getElementById('next-button').addEventListener('click', function () {
   i++;
+  document.getElementById('right-images').innerHTML = quizArray[i-1].imgFile;
   if (i < quizArray.length)  {
    
     showQuestion(i);
@@ -254,6 +255,7 @@ document.getElementById('false-button').addEventListener('click', function () {
 //Here we check if the quizArray is not ended yet
 document.getElementById('next-button').addEventListener('click', function () {
   i++;
+  document.getElementById('right-images').innerHTML = quizArray[i-1].imgFile;
   if (i < quizArray.length)  {
     showQuestion(i);
   } else {
