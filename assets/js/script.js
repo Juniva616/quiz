@@ -22,6 +22,7 @@ const quizArray = [
     textInfo: "Crabs may be able to intimidate other creatures with their claws, but if that's not enough, ghost crabs will growl at their enemies like a dog. However, unlike our canine friends, crabs make these fearsome noises using teeth located in their stomachs.",
 
   },
+  /*
   {
     statement: "The baobab tree can store  up to 120,000 liters of water in its trunk.",
     correctAnswer: true,
@@ -146,6 +147,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/cat.jpg" alt="A cat " aria-labelledby="A cat ">',
     textInfo: "Cats have  been hanging around humans for thousands of years.  The oldest evidence of domesticated cats dates back 9,500 years.",
   },
+  */
 
   {
     statement: "Zebra stripes only for the beauty.",
@@ -211,12 +213,18 @@ document.getElementById('true-button').addEventListener('click', function () {
 </span>`;
 
 document.getElementById('next-button').addEventListener('click', function () {
+  alert('now i = ' + i);
   if (i < quizArray.length)  {
     i++;
     showQuestion(i);
   } else {
+     //Get meaning of correctScore from DOM
+    let correctScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-
+    document.getElementById('button-area').innerHTML =
+    `<input class="button" id="next-button" type="submit" value = "The End!>
+</span>`;
+ 
   }
   
  });
@@ -247,7 +255,12 @@ document.getElementById('next-button').addEventListener('click', function () {
     i++;
     showQuestion(i);
   } else {
+     //Get meaning of correctScore from DOM 
+    let correctScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
+    document.getElementById('button-area').innerHTML =
+    `<input class="button" id="next-button" type="submit" value = "The End!">
+</span>`;
 
   }
   
