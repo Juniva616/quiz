@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
     function checkAnswers() {
       let userAnswer = true;
       
-//If true button is clicked, show message, then show textInfo
+//If "Agree" button is clicked, show message, then show textInfo
 
 document.getElementById('true-button').addEventListener('click', function () {
 
@@ -205,7 +205,7 @@ document.getElementById('true-button').addEventListener('click', function () {
       //Replace statement to textInfo in html
       document.getElementById('question').innerText = quizArray[i].textInfo;
 
-      //Replace buttons True and False to the button Next
+      //Replace buttons "Agree" and "Disagree" to the button "Next"
       document.getElementById('button-area').innerHTML =
       `<input class="button" id="next-button" type="submit" value = "Next">
 </span>`;
@@ -222,16 +222,19 @@ document.getElementById('next-button').addEventListener('click', function () {
  });
        });
 
-//If false button is clicked, show message, then show textInfo
+//If "Disagree" button is clicked, show message, then show textInfo
 
-      document.getElementById('false-button').addEventListener('click', function () {
-         userAnswer = false;
-        let message = quizArray[i].correctAnswer === userAnswer ? "You are right!" : "Sorry, you are wrong!";
-      alert(message);
-
-      let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
-      document.getElementById("wrong").innerText = wrongScore;
-
+document.getElementById('false-button').addEventListener('click', function () {
+  userAnswer = false;
+  if (userAnswer === quizArray[i].correctAnswer) {
+    alert("You are right!")
+      let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
+      document.getElementById("correct").innerText = correctScore;
+  } else {
+    alert("Sorry, you are wrong!")
+    let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
+    document.getElementById("wrong").innerText = wrongScore;
+  }
       //Replace statement to textInfo in html
       document.getElementById('question').innerText = quizArray[i].textInfo;
       //Replace buttons True and False to the button Next
