@@ -19,7 +19,7 @@ const quizArray = [
     statement: 'Crabs cannot growl.',
     correctAnswer: false,
     imgFile: '<img src="assets/images/crab.jpg" alt=" A Crab" aria-labelledby="A crab ">',
-    textInfo: "Crabs may be able to intimidate other creatures with their claws, but if that's not enough, ghost crabs will growl at their enemies like a dog. However, unlike our canine friends, crabs make these fearsome noises using teeth located in their stomachs.",
+    textInfo: "Crabs intimidate other creatures with their claws, but also ghost crabs will growl at their enemies like a dog. Crabs make these fearsome noises using teeth located in their stomachs.",
 
   },
   /*
@@ -117,7 +117,7 @@ const quizArray = [
     statement: "Sea otters are adept at using tools.",
     correctAnswer: true,
     imgFile: '<img src="assets/images/otters.jpg" alt=" Sea otters " aria-labelledby="Sea otters  ">',
-    textInfo: "Scientists  suggests that otters may have been using tools for millions of years. Sea otters frequently use rocks to break open well-armored prey, such as snails.",
+    textInfo: "Scientists think that otters have been using tools for millions of years. Sea otters frequently use rocks to break open well-armored prey, such as snails.",
   },
 
   {
@@ -131,7 +131,7 @@ const quizArray = [
     statement: "Slow lorises are the only venomous primates.",
     correctAnswer: true,
     imgFile: '<img src="assets/images/loris.jpg" alt=" Slow loris" aria-labelledby="Slow loris ">',
-    textInfo: "Slow lorises are cute, but their bite can kill. These adorable animals secrete toxins from a gland in the crook of their inner arms. Their bites have caused anaphylactic shock and even death in humans.",
+    textInfo: "Slow lorises are cute, but their bite can kill.  Their bites have caused anaphylactic shock and even death in humans.",
   },
 
   {
@@ -153,7 +153,7 @@ const quizArray = [
     statement: "Zebra stripes only for the beauty.",
     correctAnswer: false,
     imgFile: '<img src="assets/images/zebra.jpg" alt="A zebra " aria-labelledby="A zebra ">',
-    textInfo: " Zebra stripes are as unique as fingerprints. Their stripes help camouflage them to confuse large predators, act as an identification signal for other zebras, and act as a sort of portable air conditioner. Also, zebra stripes are the best fly repellant, and the narrower the stripes, the better.",
+    textInfo: " Zebra stripes are as unique as fingerprints. The stripes help to camouflage, act as an identification signal for other zebras and as a sort of portable air conditioner. Also they are the best fly repellant, and the narrower the stripes, the better.",
   },
 
 ]
@@ -212,10 +212,12 @@ document.getElementById('true-button').addEventListener('click', function () {
       `<input class="button" id="next-button" type="submit" value = "Next">
 </span>`;
 
+//Here we check if the quizArray is not ended yet
 document.getElementById('next-button').addEventListener('click', function () {
   alert('now i = ' + i);
+  i++;
   if (i < quizArray.length)  {
-    i++;
+   
     showQuestion(i);
   } else {
      //Get meaning of correctScore from DOM
@@ -250,9 +252,10 @@ document.getElementById('false-button').addEventListener('click', function () {
       `<input class="button" id="next-button" type="submit" value = "Next">
 </span>`;
 
+//Here we check if the quizArray is not ended yet
 document.getElementById('next-button').addEventListener('click', function () {
+  i++;
   if (i < quizArray.length)  {
-    i++;
     showQuestion(i);
   } else {
      //Get meaning of correctScore from DOM 
