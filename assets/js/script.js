@@ -19,7 +19,7 @@ const quizArray = [
     statement: 'Crabs cannot growl.',
     correctAnswer: false,
     imgFile: '<img src="assets/images/crab.jpg" alt=" A Crab" aria-labelledby="A crab ">',
-    textInfo: "Crabs intimidate other creatures with their claws, but also ghost crabs will growl at their enemies like a dog. Crabs make these fearsome noises using teeth located in their stomachs.",
+    textInfo: "Crabs intimidate other creatures with their claws, but also ghost crabs will growl at their enemies like a dog. The crabs make these fearsome noises using teeth located in their stomachs.",
 
   },
   /*
@@ -214,7 +214,6 @@ document.getElementById('true-button').addEventListener('click', function () {
 
 //Here we check if the quizArray is not ended yet
 document.getElementById('next-button').addEventListener('click', function () {
-  alert('now i = ' + i);
   i++;
   if (i < quizArray.length)  {
    
@@ -224,7 +223,7 @@ document.getElementById('next-button').addEventListener('click', function () {
     let correctScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
     document.getElementById('button-area').innerHTML =
-    `<input class="button" id="next-button" type="submit" value = "The End!>
+    `<input class="button" id="next-button" type="submit" value = "The End>
 </span>`;
  
   }
@@ -262,7 +261,7 @@ document.getElementById('next-button').addEventListener('click', function () {
     let correctScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
     document.getElementById('button-area').innerHTML =
-    `<input class="button" id="next-button" type="submit" value = "The End!">
+    `<input class="button" id="next-button" type="submit" value = "The End">
 </span>`;
 
   }
