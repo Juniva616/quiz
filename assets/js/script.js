@@ -22,7 +22,7 @@ const quizArray = [
     textInfo: "Crabs intimidate other creatures with their claws, but also ghost crabs will growl at their enemies like a dog. The crabs make these fearsome noises using teeth located in their stomachs.",
 
   },
-  /*
+  
   {
     statement: "The baobab tree can store  up to 120,000 liters of water in its trunk.",
     correctAnswer: true,
@@ -121,10 +121,10 @@ const quizArray = [
   },
 
   {
-    statement: "Bamboo is a grass.",
-    correctAnswer: true,
+    statement: "Bamboo is a tree.",
+    correctAnswer: false,
     imgFile: '<img src="assets/images/bamboo.jpg" alt="Bamboo" aria-labelledby=" Bamboo">',
-    textInfo: "bamboos are the largest members of the grass family. Bamboo is the fastest growing woody plant in the world; it can grow upto 35 inches in a single day.",
+    textInfo: "Bamboos are the largest members of the grass family. Bamboo is the fastest growing woody plant in the world; it can grow upto 35 inches in a single day.",
   },
 
   {
@@ -147,7 +147,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/cat.jpg" alt="A cat " aria-labelledby="A cat ">',
     textInfo: "Cats have  been hanging around humans for thousands of years.  The oldest evidence of domesticated cats dates back 9,500 years.",
   },
-  */
+  
 
   {
     statement: "Zebra stripes only for the beauty.",
