@@ -76,11 +76,12 @@ h2 {
 
 .flex-container {
     display: flex;
-    background-color: dodgerblue;
+  /*  background-color: dodgerblue; */
 }
 
 .flex-container>div {
     background-color: #f1f1f1;
+    border: 2px solid silver;
     margin: 10px;
     padding: 20px;
     font-size: 30px;
@@ -93,6 +94,7 @@ h2 {
     font-weight: 600;
     padding: 20px;
     margin-top: 0;   
+    border: 2px solid silver;
 }
 
 #left-images, #right-images {
@@ -117,11 +119,13 @@ h2 {
     margin: 0 auto; 
     max-width: 50%;
     font-size: 2rem;
+    justify-content: space-evenly;
 }   
 
 .scores {
-    justify-content: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    justify-self: center;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 800;
     text-align: center;
     color: yellow;
     padding: 20px;

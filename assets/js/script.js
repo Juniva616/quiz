@@ -223,7 +223,7 @@ document.getElementById('next-button').addEventListener('click', function () {
     let correctScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
     document.getElementById('button-area').innerHTML =
-    `<input class="button" id="next-button" type="submit" value = "The End>
+    `<input class="button" id="next-button" type="submit" value = "The End">
 </span>`;
  
   }
