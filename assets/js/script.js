@@ -188,13 +188,19 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
       
 //If true button is clicked, show message, then show textInfo
 
-      document.getElementById('true-button').addEventListener('click', function () {
-       
-      let message = quizArray[i].correctAnswer === userAnswer ? "You are right!" : "Sorry, you are wrong!";
-      alert(message);
+document.getElementById('true-button').addEventListener('click', function () {
 
-      let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
-      document.getElementById("correct").innerText = correctScore;
+  userAnswer = true;
+  if (userAnswer === quizArray[i].correctAnswer) {
+    alert("You are right!")
+
+    let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
+    document.getElementById("correct").innerText = correctScore;
+  } else {
+    alert("Sorry, you are wrong!")
+    let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
+    document.getElementById("wrong").innerText = wrongScore;
+  }
 
       //Replace statement to textInfo in html
       document.getElementById('question').innerText = quizArray[i].textInfo;
