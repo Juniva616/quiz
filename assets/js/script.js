@@ -174,17 +174,15 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
         document.getElementById('left-images').innerHTML = quizArray[i].imgFile;
 
         document.getElementById('button-area').innerHTML =
-          `<input class="button" id="true-button" type="submit" value = "True">
+          `<input class="button" id="true-button" type="submit" value = "Agree">
   </span>
   <span>
-      <input class="button" id="false-button" type="submit" value = "False">
+      <input class="button" id="false-button" type="submit" value = "Disagree">
   </span>`;
- 
-      checkAnswers();
-       
+      checkAnswers();     
     }
 
-// Adds EventListeners to buttons True and False 
+// Adds EventListeners to buttons Agree and Disagree 
     function checkAnswers() {
       let userAnswer = true;
       
@@ -211,7 +209,7 @@ document.getElementById('next-button').addEventListener('click', function () {
     i++;
     showQuestion(i);
   } else {
-    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done! Game is Over!`;
+    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
 
   }
   
@@ -240,13 +238,11 @@ document.getElementById('next-button').addEventListener('click', function () {
     i++;
     showQuestion(i);
   } else {
-    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done! Game is Over!`;
+    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
 
   }
   
  });
       });
       
-      
-
       }
