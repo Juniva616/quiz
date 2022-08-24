@@ -7,7 +7,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/lions.jpg" alt="Lions" aria-labelledby="Lions">',
     textInfo: ' Lionesses, not male lions, do the majority of hunting for their pride. Lionesses hunt around 90 percent of the time, while the males protect their pride.',
   },
-
+  /*
   {
     statement: 'Roses and apples belong to the same family.',
     correctAnswer: true,
@@ -22,7 +22,7 @@ const quizArray = [
     textInfo: "Crabs intimidate other creatures with their claws, but also ghost crabs will growl at their enemies like a dog. The crabs make these fearsome noises using teeth located in their stomachs.",
 
   },
-  /*
+ 
   {
     statement: "The baobab tree can store  up to 120,000 liters of water in its trunk.",
     correctAnswer: true,
@@ -126,7 +126,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/bamboo.jpg" alt="Bamboo" aria-labelledby=" Bamboo">',
     textInfo: "Bamboos are the largest members of the grass family. Bamboo is the fastest growing woody plant in the world; it can grow upto 35 inches in a single day.",
   },
-
+ 
   {
     statement: "Slow lorises are the only venomous primates.",
     correctAnswer: true,
@@ -140,14 +140,14 @@ const quizArray = [
     imgFile: '<img src="assets/images/cucumber.jpg" alt="Cucumber " aria-labelledby=" Cucumber ">',
     textInfo: "Cucumber is a fruit because it grows from flowers and contains seeds inside, so  it is botanically a fruit.",
   },
-
+*/
   {
     statement: "Cats lived with people before A.D. started.",
     correctAnswer: true,
     imgFile: '<img src="assets/images/cat.jpg" alt="A cat " aria-labelledby="A cat ">',
     textInfo: "Cats have  been hanging around humans for thousands of years.  The oldest evidence of domesticated cats dates back 9,500 years.",
   },
-  */
+ 
 
   {
     statement: "Zebra stripes only for the beauty.",
@@ -162,123 +162,147 @@ const quizArray = [
 
 document.addEventListener("DOMContentLoaded", function startQuiz() {
 
-      let startButton = document.getElementById("start-button");
-      startButton.addEventListener('click', showQuestion);
- });
-   
-    
+  let startButton = document.getElementById("start-button");
+  startButton.addEventListener('click', showQuestion);
+});
+
+
 //Replaces the welcoming message and the Start button with the Quiz.statement and True and False buttons
 //in index.html and calls for checkAnswers(); 
 
-    function showQuestion() {
-  
-        document.getElementById('question').innerText = quizArray[i].statement;
-        document.getElementById('left-images').innerHTML = quizArray[i].imgFile;
+function showQuestion() {
 
-        document.getElementById('button-area').innerHTML =
-          `<input class="button" id="true-button" type="submit" value = "Agree">
+  document.getElementById('question').innerText = quizArray[i].statement;
+  document.getElementById('left-images').innerHTML = quizArray[i].imgFile;
+
+  document.getElementById('button-area').innerHTML =
+    `<input class="button" id="true-button" type="submit" value = "Agree">
   </span>
   <span>
       <input class="button" id="false-button" type="submit" value = "Disagree">
   </span>`;
-      checkAnswers();     
-    }
+  checkAnswers();
+}
 
 // Adds EventListeners to buttons Agree and Disagree 
-    function checkAnswers() {
-      let userAnswer = true;
-      
-//If "Agree" button is clicked, show message, then show textInfo
+function checkAnswers() {
+  let userAnswer = true;
 
-document.getElementById('true-button').addEventListener('click', function () {
+  //If "Agree" button is clicked, show message, then show textInfo
 
-  userAnswer = true;
-  if (userAnswer === quizArray[i].correctAnswer) {
-    
-    alert("You are right!");
-     
-    let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
-    document.getElementById("correct").innerText = correctScore;
-  } else {
-    alert("Sorry, you are wrong!");
+  document.getElementById('true-button').addEventListener('click', function () {
 
-    let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
-    document.getElementById("wrong").innerText = wrongScore;
-  }
+    userAnswer = true;
+    if (userAnswer === quizArray[i].correctAnswer) {
 
-      //Replace statement to textInfo in html
-      document.getElementById('question').innerText = quizArray[i].textInfo;
+      alert("You are right!");
 
-      //Replace buttons "Agree" and "Disagree" to the button "Next"
-      document.getElementById('button-area').innerHTML =
-      `<input class="button" id="next-button" type="submit" value = "Next">
-</span>`;
-
-//Here we check if the quizArray is not ended yet
-document.getElementById('next-button').addEventListener('click', function () {
-  i++;
-  document.getElementById('right-images').innerHTML = quizArray[i-1].imgFile;
-  if (i < quizArray.length)  {
-   
-    showQuestion(i);
-  } else {
-    congratulations(); };
-     //Get meaning of correctScore from DOM
-   // let correctScore = parseInt(document.getElementById("correct").innerText);
-  //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-  //  document.getElementById('button-area').innerHTML =
-//    `<input class="button" id="next-button" type="submit" value = "The End">
-//</span>`;
-   
- });
-       });
-
-//If "Disagree" button is clicked, show message, then show textInfo
-
-document.getElementById('false-button').addEventListener('click', function () {
-  userAnswer = false;
-  if (userAnswer === quizArray[i].correctAnswer) {
-    alert("You are right!");
       let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
       document.getElementById("correct").innerText = correctScore;
-  } else {
-     alert("Sorry, you are wrong!");
-    let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
-    document.getElementById("wrong").innerText = wrongScore;
-  }
-      //Replace statement to textInfo in html
-      document.getElementById('question').innerText = quizArray[i].textInfo;
-      //Replace buttons True and False to the button Next
-      document.getElementById('button-area').innerHTML =
-      `<input class="button" id="next-button" type="submit" value = "Next">
-</span>`;
+    } else {
+      alert("Sorry, you are wrong!");
 
-//Here we check if the quizArray is not ended yet
-document.getElementById('next-button').addEventListener('click', function () {
-  i++;
-  document.getElementById('right-images').innerHTML = quizArray[i-1].imgFile;
-  if (i < quizArray.length)  {
-    showQuestion(i);
-  } else {
-     congratulations(); };
-     //Get meaning of correctScore from DOM 
-  //  let correctScore = parseInt(document.getElementById("correct").innerText);
-  //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-  //  document.getElementById('button-area').innerHTML =
-  //  `<input class="button" id="next-button" type="submit" value = "The End">
+      let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
+      document.getElementById("wrong").innerText = wrongScore;
+    }
+
+    showCorrectAnswer();
+
+    //Replace statement to textInfo in html                      ----------------------------------------------------------
+  //  document.getElementById('question').innerText = quizArray[i].textInfo;
+
+    //Replace buttons "Agree" and "Disagree" to the button "Next"
+ //   document.getElementById('button-area').innerHTML =
+  //    `<input class="button" id="next-button" type="submit" value = "Next">
 //</span>`;
 
-  
-  
- });
-      });
-      
-      }
+    //Here we check if the quizArray is not ended yet
+    document.getElementById('next-button').addEventListener('click', function () {
+      i++;
+      document.getElementById('right-images').innerHTML = quizArray[i - 1].imgFile;
+      if (i < quizArray.length) {
 
-      function congratulations() {
-    let correctScore = parseInt(document.getElementById("correct").innerText);
-    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-    document.getElementById('button-area').innerHTML =
+        showQuestion(i);
+      } else {
+        congratulations();
+      };
+      //Get meaning of correctScore from DOM
+      // let correctScore = parseInt(document.getElementById("correct").innerText);
+      //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
+      //  document.getElementById('button-area').innerHTML =
+      //    `<input class="button" id="next-button" type="submit" value = "The End">
+      //</span>`;
+
+    });
+  });
+
+  //If "Disagree" button is clicked, show message, then show textInfo
+
+  document.getElementById('false-button').addEventListener('click', function () {
+    userAnswer = false;
+    if (userAnswer === quizArray[i].correctAnswer) {
+      alert("You are right!");
+      let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
+      document.getElementById("correct").innerText = correctScore;
+    } else {
+      alert("Sorry, you are wrong!");
+      let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
+      document.getElementById("wrong").innerText = wrongScore;
+    }
+
+    showCorrectAnswer();
+
+    //Replace statement to textInfo in html                                    --------------------------------------------
+  //  document.getElementById('question').innerText = quizArray[i].textInfo;          
+    //Replace buttons Agree  and Disagree to the button Next
+ //   document.getElementById('button-area').innerHTML =
+  //    `<input class="button" id="next-button" type="submit" value = "Next">
+//</span>`;
+
+   //Here we check if the quizArray is not ended yet
+    document.getElementById('next-button').addEventListener('click', function () {
+      i++;
+      document.getElementById('right-images').innerHTML = quizArray[i - 1].imgFile;
+      if (i < quizArray.length) {
+        showQuestion(i);
+      } else {
+        congratulations();
+      };
+      //Get meaning of correctScore from DOM 
+      //  let correctScore = parseInt(document.getElementById("correct").innerText);
+      //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
+      //  document.getElementById('button-area').innerHTML =
+      //  `<input class="button" id="next-button" type="submit" value = "The End">
+      //</span>`;
+
+
+
+    });
+  });
+
+}
+
+/**
+ * Replace quizArray.statement to quizArray.textInfo in html. 
+ * Replace buttons "Agree"  and "Disagree" to the button "Next".
+ */
+function showCorrectAnswer() {
+                               
+document.getElementById('question').innerText = quizArray[i].textInfo;          
+document.getElementById('button-area').innerHTML =
+  `<input class="button" id="next-button" type="submit" value = "Next">
+</span>`;
+}
+
+/**
+ * At the end of the quiz.
+ *  Get meaning of correctScore from DOM and place congratulations to the question area
+ *  with the score of correct answers.
+ */
+function congratulations() {
+  let correctScore = parseInt(document.getElementById("correct").innerText);
+  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of ${quizArray.length}! Well done!`;
+  document.getElementById('button-area').innerHTML =
     `<input class="button" id="next-button" type="submit" value = "The End">
   </span>`;
-    }
+}
