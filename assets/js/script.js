@@ -166,10 +166,10 @@ document.addEventListener("DOMContentLoaded", function startQuiz() {
   startButton.addEventListener('click', showQuestion);
 });
 
-
-//Replaces the welcoming message and the Start button with the Quiz.statement and True and False buttons
-//in index.html and calls for checkAnswers(); 
-
+/**
+ *  Replaces the welcoming message and the Start button with the quizArray.statement 
+ * and "Agree" and "Disagree" buttons, calls for checkAnswers(); 
+ */
 function showQuestion() {
 
   document.getElementById('question').innerText = quizArray[i].statement;
@@ -184,17 +184,18 @@ function showQuestion() {
   checkAnswers();
 }
 
-// Adds EventListeners to buttons Agree and Disagree 
+/**
+ * Adds eventListeners to "Agree" and "Disagree" buttons, shows an alert message, 
+ * increments the score of correct and wrong answers, calls functions showCorrectAnswer(),
+ * showQuestion(i),  congratulations();
+ */
 function checkAnswers() {
+     //the part for "Agree" button
   let userAnswer = true;
-
-  //If "Agree" button is clicked, show message, then show textInfo
-
   document.getElementById('true-button').addEventListener('click', function () {
-
     userAnswer = true;
-    if (userAnswer === quizArray[i].correctAnswer) {
 
+    if (userAnswer === quizArray[i].correctAnswer) {
       alert("You are right!");
 
       let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
@@ -202,20 +203,11 @@ function checkAnswers() {
     } else {
       alert("Sorry, you are wrong!");
 
-      let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
+     let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
       document.getElementById("wrong").innerText = wrongScore;
-    }
-
+    }                                        
     showCorrectAnswer();
-
-    //Replace statement to textInfo in html                      ----------------------------------------------------------
-  //  document.getElementById('question').innerText = quizArray[i].textInfo;
-
-    //Replace buttons "Agree" and "Disagree" to the button "Next"
- //   document.getElementById('button-area').innerHTML =
-  //    `<input class="button" id="next-button" type="submit" value = "Next">
-//</span>`;
-
+ 
     //Here we check if the quizArray is not ended yet
     document.getElementById('next-button').addEventListener('click', function () {
       i++;
@@ -226,38 +218,25 @@ function checkAnswers() {
       } else {
         congratulations();
       };
-      //Get meaning of correctScore from DOM
-      // let correctScore = parseInt(document.getElementById("correct").innerText);
-      //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-      //  document.getElementById('button-area').innerHTML =
-      //    `<input class="button" id="next-button" type="submit" value = "The End">
-      //</span>`;
-
+      
     });
   });
 
-  //If "Disagree" button is clicked, show message, then show textInfo
+  //the part for "Disagree" button  
 
   document.getElementById('false-button').addEventListener('click', function () {
     userAnswer = false;
+
     if (userAnswer === quizArray[i].correctAnswer) {
       alert("You are right!");
       let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
-      document.getElementById("correct").innerText = correctScore;
+     document.getElementById("correct").innerText = correctScore;
     } else {
       alert("Sorry, you are wrong!");
       let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
       document.getElementById("wrong").innerText = wrongScore;
     }
-
     showCorrectAnswer();
-
-    //Replace statement to textInfo in html                                    --------------------------------------------
-  //  document.getElementById('question').innerText = quizArray[i].textInfo;          
-    //Replace buttons Agree  and Disagree to the button Next
- //   document.getElementById('button-area').innerHTML =
-  //    `<input class="button" id="next-button" type="submit" value = "Next">
-//</span>`;
 
    //Here we check if the quizArray is not ended yet
     document.getElementById('next-button').addEventListener('click', function () {
@@ -268,23 +247,16 @@ function checkAnswers() {
       } else {
         congratulations();
       };
-      //Get meaning of correctScore from DOM 
-      //  let correctScore = parseInt(document.getElementById("correct").innerText);
-      //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-      //  document.getElementById('button-area').innerHTML =
-      //  `<input class="button" id="next-button" type="submit" value = "The End">
-      //</span>`;
-
-
-
+  
     });
   });
 
 }
 
+  
 /**
- * Replace quizArray.statement to quizArray.textInfo in html. 
- * Replace buttons "Agree"  and "Disagree" to the button "Next".
+ * Shows a correct answer by replacing quizArray.statement with quizArray.textInfo in DOM. 
+ * Replaces buttons "Agree"  and "Disagree" to the button "Next".
  */
 function showCorrectAnswer() {
                                
@@ -296,12 +268,12 @@ document.getElementById('button-area').innerHTML =
 
 /**
  * At the end of the quiz.
- *  Get meaning of correctScore from DOM and place congratulations to the question area
+ *  Gets meaning of correctScore from DOM and places congratulations to the question area
  *  with the score of correct answers.
  */
 function congratulations() {
   let correctScore = parseInt(document.getElementById("correct").innerText);
-  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of ${quizArray.length}! Well done!`;
+  document.getElementById('question').innerText = `Congratulations! You answered  ${correctScore} out of   ${quizArray.length} questions correctly! Well done!`;
   document.getElementById('button-area').innerHTML =
     `<input class="button" id="next-button" type="submit" value = "The End">
   </span>`;
