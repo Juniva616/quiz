@@ -22,7 +22,7 @@ const quizArray = [
     textInfo: "Crabs intimidate other creatures with their claws, but also ghost crabs will growl at their enemies like a dog. The crabs make these fearsome noises using teeth located in their stomachs.",
 
   },
-  
+  /*
   {
     statement: "The baobab tree can store  up to 120,000 liters of water in its trunk.",
     correctAnswer: true,
@@ -147,7 +147,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/cat.jpg" alt="A cat " aria-labelledby="A cat ">',
     textInfo: "Cats have  been hanging around humans for thousands of years.  The oldest evidence of domesticated cats dates back 9,500 years.",
   },
-  
+  */
 
   {
     statement: "Zebra stripes only for the beauty.",
@@ -194,12 +194,14 @@ document.getElementById('true-button').addEventListener('click', function () {
 
   userAnswer = true;
   if (userAnswer === quizArray[i].correctAnswer) {
+    
     alert("You are right!");
-
+     
     let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
     document.getElementById("correct").innerText = correctScore;
   } else {
     alert("Sorry, you are wrong!");
+
     let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
     document.getElementById("wrong").innerText = wrongScore;
   }
@@ -220,15 +222,14 @@ document.getElementById('next-button').addEventListener('click', function () {
    
     showQuestion(i);
   } else {
+    congratulations(); };
      //Get meaning of correctScore from DOM
-    let correctScore = parseInt(document.getElementById("correct").innerText);
-    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-    document.getElementById('button-area').innerHTML =
-    `<input class="button" id="next-button" type="submit" value = "The End">
-</span>`;
- 
-  }
-  
+   // let correctScore = parseInt(document.getElementById("correct").innerText);
+  //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
+  //  document.getElementById('button-area').innerHTML =
+//    `<input class="button" id="next-button" type="submit" value = "The End">
+//</span>`;
+   
  });
        });
 
@@ -259,16 +260,25 @@ document.getElementById('next-button').addEventListener('click', function () {
   if (i < quizArray.length)  {
     showQuestion(i);
   } else {
+     congratulations(); };
      //Get meaning of correctScore from DOM 
-    let correctScore = parseInt(document.getElementById("correct").innerText);
-    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
-    document.getElementById('button-area').innerHTML =
-    `<input class="button" id="next-button" type="submit" value = "The End">
-</span>`;
+  //  let correctScore = parseInt(document.getElementById("correct").innerText);
+  //  document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
+  //  document.getElementById('button-area').innerHTML =
+  //  `<input class="button" id="next-button" type="submit" value = "The End">
+//</span>`;
 
-  }
+  
   
  });
       });
       
       }
+
+      function congratulations() {
+    let correctScore = parseInt(document.getElementById("correct").innerText);
+    document.getElementById('question').innerText = `Congratulations! You answered correctly to ${correctScore} questions out of 22! Well done!`;
+    document.getElementById('button-area').innerHTML =
+    `<input class="button" id="next-button" type="submit" value = "The End">
+  </span>`;
+    }
