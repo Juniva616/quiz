@@ -121,7 +121,7 @@ const quizArray = [
   },
 
   {
-    statement: "Bamboo is a tree.",
+    statement: "A bamboo is a tree.",
     correctAnswer: false,
     imgFile: '<img src="assets/images/bamboo.jpg" alt="Bamboo" aria-labelledby=" Bamboo">',
     textInfo: "Bamboos are the largest members of the grass family. Bamboo is the fastest growing woody plant in the world; it can grow upto 35 inches in a single day.",
@@ -194,12 +194,12 @@ document.getElementById('true-button').addEventListener('click', function () {
 
   userAnswer = true;
   if (userAnswer === quizArray[i].correctAnswer) {
-    alert("You are right!")
+    alert("You are right!");
 
     let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
     document.getElementById("correct").innerText = correctScore;
   } else {
-    alert("Sorry, you are wrong!")
+    alert("Sorry, you are wrong!");
     let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
     document.getElementById("wrong").innerText = wrongScore;
   }
@@ -237,11 +237,11 @@ document.getElementById('next-button').addEventListener('click', function () {
 document.getElementById('false-button').addEventListener('click', function () {
   userAnswer = false;
   if (userAnswer === quizArray[i].correctAnswer) {
-    alert("You are right!")
+    alert("You are right!");
       let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
       document.getElementById("correct").innerText = correctScore;
   } else {
-    alert("Sorry, you are wrong!")
+     alert("Sorry, you are wrong!");
     let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
     document.getElementById("wrong").innerText = wrongScore;
   }
