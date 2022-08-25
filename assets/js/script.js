@@ -119,7 +119,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/otters.jpg" alt=" Sea otters " aria-labelledby="Sea otters  ">',
     textInfo: "Scientists think that otters have been using tools for millions of years. Sea otters frequently use rocks to break open well-armored prey, such as snails.",
   },
-
+*/
   {
     statement: "A bamboo is a tree.",
     correctAnswer: false,
@@ -140,14 +140,14 @@ const quizArray = [
     imgFile: '<img src="assets/images/cucumber.jpg" alt="Cucumber " aria-labelledby=" Cucumber ">',
     textInfo: "Cucumber is a fruit because it grows from flowers and contains seeds inside, so  it is botanically a fruit.",
   },
-*/
+
   {
     statement: "Cats lived with people before A.D. started.",
     correctAnswer: true,
     imgFile: '<img src="assets/images/cat.jpg" alt="A cat " aria-labelledby="A cat ">',
     textInfo: "Cats have  been hanging around humans for thousands of years.  The oldest evidence of domesticated cats dates back 9,500 years.",
   },
- 
+
 
   {
     statement: "Zebra stripes only for the beauty.",
@@ -181,7 +181,7 @@ function showQuestion() {
   <span>
       <input class="button" id="false-button" type="submit" value = "Disagree">
   </span>`;
-  checkAnswers();
+  checkAnswersMain();
 }
 
 /**
@@ -189,12 +189,18 @@ function showQuestion() {
  * increments the score of correct and wrong answers, calls functions showCorrectAnswer(),
  * showQuestion(i),  congratulations();
  */
-function checkAnswers() {
-     //the part for "Agree" button
-  let userAnswer = true;
-  document.getElementById('true-button').addEventListener('click', function () {
-    userAnswer = true;
 
+/// here was function checkAnswers() {
+
+//the part for "Agree" button
+function checkAnswersMain() {
+  document.getElementById('true-button').addEventListener('click', function () {
+    checkAnswers(true);
+  });  
+
+
+  /** 
+//     ==========================================================================
     if (userAnswer === quizArray[i].correctAnswer) {
       alert("You are right!");
 
@@ -218,15 +224,21 @@ function checkAnswers() {
       } else {
         congratulations();
       };
-      
+ //======================================================================     
     });
   });
-
+*/
   //the part for "Disagree" button  
 
   document.getElementById('false-button').addEventListener('click', function () {
-    userAnswer = false;
 
+    checkAnswers(false);
+
+  }); 
+
+}
+/**
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     if (userAnswer === quizArray[i].correctAnswer) {
       alert("You are right!");
       let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
@@ -247,22 +259,52 @@ function checkAnswers() {
       } else {
         congratulations();
       };
-  
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     });
   });
+ */
+//} 
 
+function checkAnswers(userAnswer) {
+  //     =================
+  let isCorrect = false; 
+  if (userAnswer === quizArray[i].correctAnswer) {
+    isCorrect = true;
+
+    let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
+    document.getElementById("correct").innerText = correctScore;
+  } else {
+    isCorrect = false;
+
+    let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
+    document.getElementById("wrong").innerText = wrongScore;
+  }
+
+  showCorrectAnswer(isCorrect);
+
+  //Here we check if the quizArray is not ended yet
+  document.getElementById('next-button').addEventListener('click', function () {
+    i++;
+    document.getElementById('right-images').innerHTML = quizArray[i - 1].imgFile;
+    if (i < quizArray.length) {
+
+      showQuestion(i);
+    } else {
+      congratulations();
+    };
+    //========================== 
+  });
 }
 
-  
 /**
  * Shows a correct answer by replacing quizArray.statement with quizArray.textInfo in DOM. 
  * Replaces buttons "Agree"  and "Disagree" to the button "Next".
  */
-function showCorrectAnswer() {
-                               
-document.getElementById('question').innerText = quizArray[i].textInfo;          
-document.getElementById('button-area').innerHTML =
-  `<input class="button" id="next-button" type="submit" value = "Next">
+function showCorrectAnswer(isCorrect) {
+  let correctText = isCorrect ? 'You are right!' : 'You are wrong!';
+  document.getElementById('question').innerText = correctText + "\n" + quizArray[i].textInfo;
+  document.getElementById('button-area').innerHTML =
+    `<input class="button" id="next-button" type="submit" value = "Next">
 </span>`;
 }
 
