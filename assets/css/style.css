@@ -6,7 +6,7 @@
 }
 
 .body {
-    background-color: bisque;
+    background-color: lightgray;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     color: #26083f;
@@ -40,8 +40,8 @@ h2 {
 }
 
 #question {
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
 }
 
 /* Style of button-area and buttons is taken from outer source https://juniva616.github.io/milestone-1/index.html */
@@ -75,6 +75,7 @@ h2 {
 
 .flex-container {
     display: flex;
+    background-color: floralwhite ;
 }
 
 .flex-container>div {
@@ -162,8 +163,8 @@ h2 {
 }
 
 
-/* Media queries  for the screen less than 980px */
-@media (max-width: 980px) {
+/* Media queries  for the screen less than 828px */
+@media (max-width: 828px) {
 
     .flex-container {
         flex-direction: row;
@@ -207,6 +208,7 @@ h2 {
         flex-direction: column;
         font-size: 120%;    
         padding: 0;
+        width: 90%;
     }
      
     #left-images {
