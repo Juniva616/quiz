@@ -9,7 +9,6 @@
     background-color: bisque;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: x-large;
     color: #26083f;
 }
 
@@ -19,7 +18,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 19rem;
+    height: 12em;
     text-align: center;
 }
 
@@ -28,7 +27,7 @@ h2 {
     letter-spacing: 5px;
     color: yellow;
     font-size: 300%;
-    padding: 40px;
+    padding: 20px;
 }
 
 #header {
@@ -43,8 +42,6 @@ h2 {
 #question {
     margin: 20px;
     padding: 20px;
-    text-align: center;
-
 }
 
 /* Style of button-area and buttons is taken from outer source https://juniva616.github.io/milestone-1/index.html */
@@ -78,7 +75,6 @@ h2 {
 
 .flex-container {
     display: flex;
-    /*  background-color: dodgerblue; */
 }
 
 .flex-container>div {
@@ -86,7 +82,8 @@ h2 {
     border: 2px solid silver;
     margin: 10px;
     padding: 20px;
-    font-size: 30px;
+    font-size: 200%;
+    align-self: center;
 }
 /*  The end of the code from outer source */
 
@@ -105,7 +102,8 @@ h2 {
     flex-basis: 21%;
     padding: 20px;
     margin-top: 0;
-    flex-wrap: wrap;
+
+  /*  flex-wrap: wrap; */
 }
 
 .footer {
@@ -135,24 +133,12 @@ h2 {
     padding: 20px;
 }
 
-/* Media queries  for the screen less than 1080px */
-@media (max-width: 1080px) {
 
-    .flex-container {
-        flex-direction: column;
-    }
 
-    .flex-container>div {
-        flex-direction: column;
-    }
 
-    .button {
-        max-width: auto;
-    }
-}
 
-/* Media queries  for the screen less than 1155px */
-@media (max-width: 1155px) {
+/* Media queries  for the screen less than 1160px */
+@media (max-width: 1160px) {
 
     .score-area {
         font-size: 1.5rem;
@@ -162,4 +148,107 @@ h2 {
     .footer {
         height: 120px;
     }
+    
+    #left-images,
+    #right-images {
+        flex-basis: 15%;
+        padding: 5px;        
+    }
+
+    .flex-container>div {
+    flex-direction: row;
+    font-size: 160%;
+}
+}
+
+
+/* Media queries  for the screen less than 980px */
+@media (max-width: 980px) {
+
+    .flex-container {
+        flex-direction: row;
+    }
+
+    .flex-container>div {
+        flex-direction: column;
+        font-size: 140%;
+    }
+
+    .button {
+        max-width: auto;
+    }
+      
+    #left-images {
+     
+        flex-basis: 10%;
+        padding: 5px;        
+    }
+
+    #right-images {
+        display: none; 
+} 
+}
+
+
+
+/* Media queries  for the screen less than 640px */
+@media (max-width: 640px) {
+    .header-bg {
+        background-image: url(../images/header-bg1.jpg);
+        height: 100px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        width: 100%;
+    }
+     
+    .flex-container>div {
+        flex-direction: column;
+        font-size: 120%;    
+        padding: 0;
+    }
+     
+    #left-images {
+        padding: 5px;        
+    }
+
+    #right-images {
+        display: none; 
+} 
+    .question-area {
+        padding: 3px;
+        margin: 3px;
+}
+    #question {
+        margin: 3px;
+        padding: 2px;
+}
+
+h1,
+h2 { 
+    font-size: 200%;
+    padding: 5px;
+}
+
+#button-area {
+    box-sizing: border-box;
+    max-width: 90%;
+    padding: 3px;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+    text-align: center;
+}
+
+.button {
+    max-width: 100px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin: auto 10px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+}
+
+
 }
