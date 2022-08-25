@@ -59,7 +59,7 @@ h2 {
     box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
     text-align: center;
 }
- 
+
 .button {
     max-width: 100px;
     border-radius: 6px;
@@ -72,11 +72,13 @@ h2 {
     cursor: pointer;
     box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
 }
+/* The end of the code from outer source */
+
 /*  flex-container idea is taken from  https://www.w3schools.com/ and adjusted to the project needs*/
 
 .flex-container {
     display: flex;
-  /*  background-color: dodgerblue; */
+    /*  background-color: dodgerblue; */
 }
 
 .flex-container>div {
@@ -86,6 +88,7 @@ h2 {
     padding: 20px;
     font-size: 30px;
 }
+/*  The end of the code from outer source */
 
 .question-area {
     flex-basis: 50%;
@@ -93,11 +96,12 @@ h2 {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     padding: 20px;
-    margin-top: 0;   
+    margin-top: 0;
     border: 2px solid silver;
 }
 
-#left-images, #right-images {
+#left-images,
+#right-images {
     flex-basis: 21%;
     padding: 20px;
     margin-top: 0;
@@ -116,11 +120,11 @@ h2 {
 /*  The score-area in the footer */
 .score-area {
     display: flex;
-    margin: 0 auto; 
+    margin: 0 auto;
     max-width: 50%;
     font-size: 2rem;
     justify-content: space-evenly;
-}   
+}
 
 .scores {
     justify-self: center;
@@ -131,21 +135,17 @@ h2 {
     padding: 20px;
 }
 
-/* Media queries  for the screen less than 800px */
-@media (max-width: 800px) {
+/* Media queries  for the screen less than 1080px */
+@media (max-width: 1080px) {
 
     .flex-container {
         flex-direction: column;
-    }  
+    }
 
     .flex-container>div {
-    flex-direction: column;
-}
-}
+        flex-direction: column;
+    }
 
-
-/* Media queries  for the screen less than 1080px */
-@media (max-width: 1080px) {
     .button {
         max-width: auto;
     }
@@ -154,13 +154,12 @@ h2 {
 /* Media queries  for the screen less than 1155px */
 @media (max-width: 1155px) {
 
-.score-area {
-    font-size: 1.5rem;
-    padding: 15px;
-}
+    .score-area {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
 
-
-.footer {
-    height: 120px;
-}
+    .footer {
+        height: 120px;
+    }
 }

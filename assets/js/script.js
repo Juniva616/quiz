@@ -7,7 +7,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/lions.jpg" alt="Lions" aria-labelledby="Lions">',
     textInfo: ' Lionesses, not male lions, do the majority of hunting for their pride. Lionesses hunt around 90 percent of the time, while the males protect their pride.',
   },
-  /*
+  
   {
     statement: 'Roses and apples belong to the same family.',
     correctAnswer: true,
@@ -119,14 +119,14 @@ const quizArray = [
     imgFile: '<img src="assets/images/otters.jpg" alt=" Sea otters " aria-labelledby="Sea otters  ">',
     textInfo: "Scientists think that otters have been using tools for millions of years. Sea otters frequently use rocks to break open well-armored prey, such as snails.",
   },
-*/
+
   {
     statement: "A bamboo is a tree.",
     correctAnswer: false,
     imgFile: '<img src="assets/images/bamboo.jpg" alt="Bamboo" aria-labelledby=" Bamboo">',
     textInfo: "Bamboos are the largest members of the grass family. Bamboo is the fastest growing woody plant in the world; it can grow upto 35 inches in a single day.",
   },
- 
+
   {
     statement: "Slow lorises are the only venomous primates.",
     correctAnswer: true,
@@ -185,89 +185,28 @@ function showQuestion() {
 }
 
 /**
- * Adds eventListeners to "Agree" and "Disagree" buttons, shows an alert message, 
- * increments the score of correct and wrong answers, calls functions showCorrectAnswer(),
- * showQuestion(i),  congratulations();
+ *  Adds eventListeners to "Agree" and "Disagree" buttons, calls checkAnswers()
  */
-
-/// here was function checkAnswers() {
-
-//the part for "Agree" button
 function checkAnswersMain() {
+
+  //the part for "Agree" button
   document.getElementById('true-button').addEventListener('click', function () {
     checkAnswers(true);
-  });  
-
-
-  /** 
-//     ==========================================================================
-    if (userAnswer === quizArray[i].correctAnswer) {
-      alert("You are right!");
-
-      let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
-      document.getElementById("correct").innerText = correctScore;
-    } else {
-      alert("Sorry, you are wrong!");
-
-     let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
-      document.getElementById("wrong").innerText = wrongScore;
-    }                                        
-    showCorrectAnswer();
- 
-    //Here we check if the quizArray is not ended yet
-    document.getElementById('next-button').addEventListener('click', function () {
-      i++;
-      document.getElementById('right-images').innerHTML = quizArray[i - 1].imgFile;
-      if (i < quizArray.length) {
-
-        showQuestion(i);
-      } else {
-        congratulations();
-      };
- //======================================================================     
-    });
   });
-*/
   //the part for "Disagree" button  
-
   document.getElementById('false-button').addEventListener('click', function () {
-
     checkAnswers(false);
-
-  }); 
-
-}
-/**
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    if (userAnswer === quizArray[i].correctAnswer) {
-      alert("You are right!");
-      let correctScore = parseInt(document.getElementById("correct").innerText) + 1;
-     document.getElementById("correct").innerText = correctScore;
-    } else {
-      alert("Sorry, you are wrong!");
-      let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
-      document.getElementById("wrong").innerText = wrongScore;
-    }
-    showCorrectAnswer();
-
-   //Here we check if the quizArray is not ended yet
-    document.getElementById('next-button').addEventListener('click', function () {
-      i++;
-      document.getElementById('right-images').innerHTML = quizArray[i - 1].imgFile;
-      if (i < quizArray.length) {
-        showQuestion(i);
-      } else {
-        congratulations();
-      };
-  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    });
   });
- */
-//} 
+}
 
+
+/**
+ * Shows the correct answer, increments the score of correct and wrong answers,
+ *  calls functions showCorrectAnswer(), showQuestion(i),  congratulations()
+ */
 function checkAnswers(userAnswer) {
-  //     =================
-  let isCorrect = false; 
+
+  let isCorrect = false;
   if (userAnswer === quizArray[i].correctAnswer) {
     isCorrect = true;
 
@@ -279,7 +218,6 @@ function checkAnswers(userAnswer) {
     let wrongScore = parseInt(document.getElementById("wrong").innerText) + 1;
     document.getElementById("wrong").innerText = wrongScore;
   }
-
   showCorrectAnswer(isCorrect);
 
   //Here we check if the quizArray is not ended yet
@@ -292,7 +230,6 @@ function checkAnswers(userAnswer) {
     } else {
       congratulations();
     };
-    //========================== 
   });
 }
 
@@ -301,6 +238,7 @@ function checkAnswers(userAnswer) {
  * Replaces buttons "Agree"  and "Disagree" to the button "Next".
  */
 function showCorrectAnswer(isCorrect) {
+
   let correctText = isCorrect ? 'You are right!' : 'You are wrong!';
   document.getElementById('question').innerText = correctText + "\n" + quizArray[i].textInfo;
   document.getElementById('button-area').innerHTML =
@@ -314,6 +252,7 @@ function showCorrectAnswer(isCorrect) {
  *  with the score of correct answers.
  */
 function congratulations() {
+
   let correctScore = parseInt(document.getElementById("correct").innerText);
   document.getElementById('question').innerText = `Congratulations! You answered  ${correctScore} out of   ${quizArray.length} questions correctly! Well done!`;
   document.getElementById('button-area').innerHTML =
