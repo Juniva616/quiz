@@ -162,6 +162,35 @@ h2 {
 }
 }
 
+/* Media queries  for the screen less than 1000px */
+@media (max-width: 1000px) {
+
+    .flex-container>div {
+        flex-direction: row;
+        font-size: 140%;
+    }
+
+    
+#button-area {
+    box-sizing: border-box;
+    max-width: 90%;
+    padding: 3px;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+    text-align: center;
+}
+
+.button {
+    max-width: 100px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin: auto 10px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+}
+
+}
 
 /* Media queries  for the screen less than 828px */
 @media (max-width: 828px) {
