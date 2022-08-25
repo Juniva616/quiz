@@ -69,13 +69,14 @@ h2 {
     cursor: pointer;
     box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
 }
+
 /* The end of the code from outer source */
 
 /*  flex-container idea is taken from  https://www.w3schools.com/ and adjusted to the project needs*/
 
 .flex-container {
     display: flex;
-    background-color: floralwhite ;
+    background-color: floralwhite;
 }
 
 .flex-container>div {
@@ -86,6 +87,7 @@ h2 {
     font-size: 200%;
     align-self: center;
 }
+
 /*  The end of the code from outer source */
 
 .question-area {
@@ -104,7 +106,7 @@ h2 {
     padding: 20px;
     margin-top: 0;
 
-  /*  flex-wrap: wrap; */
+    /*  flex-wrap: wrap; */
 }
 
 .footer {
@@ -149,17 +151,18 @@ h2 {
     .footer {
         height: 120px;
     }
-    
+
     #left-images,
     #right-images {
         flex-basis: 15%;
-        padding: 5px;        
+        padding: 5px;
     }
 
     .flex-container>div {
-    flex-direction: row;
-    font-size: 160%;
-}
+        flex-direction: row;
+        font-size: 160%;
+        align-self: center;
+    }
 }
 
 /* Media queries  for the screen less than 1000px */
@@ -168,27 +171,28 @@ h2 {
     .flex-container>div {
         flex-direction: row;
         font-size: 140%;
+        align-self: center;
     }
 
-    
-#button-area {
-    box-sizing: border-box;
-    max-width: 90%;
-    padding: 3px;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
-    text-align: center;
-}
 
-.button {
-    max-width: 100px;
-    border-radius: 6px;
-    padding: 6px 10px;
-    margin: auto 10px;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
-}
+    #button-area {
+        box-sizing: border-box;
+        max-width: 90%;
+        padding: 3px;
+        box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+        text-align: center;
+    }
+
+    .button {
+        max-width: 100px;
+        border-radius: 6px;
+        padding: 6px 10px;
+        margin: auto 10px;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+    }
 
 }
 
@@ -202,21 +206,22 @@ h2 {
     .flex-container>div {
         flex-direction: column;
         font-size: 140%;
+        align-self: center;
     }
 
     .button {
         max-width: auto;
     }
-      
+
     #left-images {
-     
+
         flex-basis: 10%;
-        padding: 5px;        
+        padding: 5px;
     }
 
     #right-images {
-        display: none; 
-} 
+        display: none;
+    }
 }
 
 
@@ -232,54 +237,57 @@ h2 {
         flex-direction: column;
         width: 100%;
     }
-     
+
     .flex-container>div {
         flex-direction: column;
-        font-size: 120%;    
+        font-size: 120%;
         padding: 0;
         width: 90%;
+        align-self: center;
     }
-     
+
     #left-images {
-        padding: 5px;        
+        padding: 5px;
     }
 
     #right-images {
-        display: none; 
-} 
+        display: none;
+    }
+
     .question-area {
         padding: 3px;
         margin: 3px;
-}
+    }
+
     #question {
         margin: 3px;
         padding: 2px;
-}
+    }
 
-h1,
-h2 { 
-    font-size: 200%;
-    padding: 5px;
-}
+    h1,
+    h2 {
+        font-size: 200%;
+        padding: 5px;
+    }
 
-#button-area {
-    box-sizing: border-box;
-    max-width: 90%;
-    padding: 3px;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
-    text-align: center;
-}
+    #button-area {
+        box-sizing: border-box;
+        max-width: 90%;
+        padding: 3px;
+        box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+        text-align: center;
+    }
 
-.button {
-    max-width: 100px;
-    border-radius: 6px;
-    padding: 6px 10px;
-    margin: auto 10px;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
-}
+    .button {
+        max-width: 100px;
+        border-radius: 6px;
+        padding: 6px 10px;
+        margin: auto 10px;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
+    }
 
 
 }
