@@ -44,7 +44,7 @@ const quizArray = [
   },
 
   {
-    statement: "Dandelion is poisonous.",
+    statement: "A dandelion is poisonous.",
     correctAnswer: false,
     imgFile: '<img src="assets/images/dandelion.jpg" alt=" Dandelion" aria-labelledby="Dandelion ">',
     textInfo: "The eye-catchy Dandelion is edible! Yes, from the petals and leaves to the roots, it is completely palatable.",
