@@ -209,10 +209,6 @@ h2 {
 
     }
 
-    .button {
-        max-width: auto;
-    }
-
     #left-images {
 
         flex-basis: 10%;
