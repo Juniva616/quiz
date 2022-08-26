@@ -7,7 +7,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/lions.jpg" alt="Lions" aria-labelledby="Lions">',
     textInfo: ' Lionesses, not male lions, do the majority of hunting for their pride. Lionesses hunt around 90 percent of the time, while the males protect their pride.',
   },
-  /*
+  
   {
     statement: 'Roses and apples belong to the same family.',
     correctAnswer: true,
@@ -140,7 +140,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/cucumber.jpg" alt="Cucumber " aria-labelledby=" Cucumber ">',
     textInfo: "Cucumber is a fruit because it grows from flowers and contains seeds inside, so  it is botanically a fruit.",
   },
-*/
+
   {
     statement: "Cats lived with people before A.D. started.",
     correctAnswer: true,
