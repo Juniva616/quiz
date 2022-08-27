@@ -39,12 +39,16 @@ h2 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.text-center {
+    text-align: center;
+}
+
 #question {
     margin: 5px;
     padding: 5px;
 }
 
-/* Style of button-area and buttons is taken from outer source https://juniva616.github.io/milestone-1/index.html */
+/* Style of button-area and buttons is taken from outer source https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/ */
 #button-area {
     box-sizing: border-box;
     max-width: 50%;
@@ -116,6 +120,12 @@ h2 {
     background-size: cover;
     width: 100%;
     height: 110px;
+}
+
+.copyright {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: yellow;
+    font-size: 16px;
 }
 
 /*  The score-area in the footer */
