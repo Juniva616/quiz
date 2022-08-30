@@ -1,4 +1,7 @@
- # Flora and Fauna Quiz
+### Flora and Fauna Quiz
+
+ ![The quiz screenshot](https://juniva616.github.io/quiz/readme-files/md-quiz.png)
+
 This site is an online quiz devoted to the interesting facts about animals and plants. The purpose of the quiz is to entertain and educate children and adults loving nature of our mother Earth.
  
 # Features
@@ -12,19 +15,22 @@ This site is an online quiz devoted to the interesting facts about animals and p
 - Congratulations at the end of the quiz
 
 ## Existing features
- ![The navigation bar screenshot](https://juniva616.github.io/milestone-1/readme-files/scr-navbar.png)
+  
+![The header screenshot](https://juniva616.github.io/quiz/readme-files/md-header.png)
 
-![The header screenshot](https://juniva616.github.io/readme-files/md-header.png)
 ### Header and the title
 
 The quiz takes one page with the background image which covers the header and footer and the bright title of the quiz - "Flora & Fauna", which attracts the attention of the user and gives a clear idea of the site's purpose.
 
 ### The game area
 
+ ![The gamearea screenshot](https://juniva616.github.io/quiz/readme-files/md-gamearea.png)
+
 The main part of the viewport takes the game area with are images to the left and to the right and a central question area with the text.
 
 On the smaller screens only the left image and the question area are visible.
 
+ ![The screenshot for screens less than 768px](https://juniva616.github.io/quiz/readme-files/md-768px.png)
 
 The quiz starts with the welcoming message with explanations of the rules. It makes the users comfortable and gives clear and understandable directions what they should do to start the quiz.
 
@@ -37,6 +43,8 @@ When the button START is pressed the statement with an interesting and little kn
 When the quiz comes to the end the user is greeted by the message with the number of correct answers, which leaves the user with a pleasant impression that he/she is a winner.
 
  ### Footer area
+
+![The screenshot for the footer](https://juniva616.github.io/quiz/readme-files/md-footer.png)
 
  After each user's answer the score of the correct/wrong answers increases. This way the user can see the total number of the correct and wrong answers.
 
@@ -97,8 +105,17 @@ leads to the next page.
 ## Testing
 - The site has been tested in Chrome, Edge, Firefox and Opera and it works correctly in all browsers, all buttons work as intended.
 - The site is adapted to different screen sizes which is tested with DevTools (Responsive) and with a real notebook, smartphones and a tablet by me and my friends. 
+
+![The screenshot for different screen sizes](https://juniva616.github.io/quiz/readme-files/md-respons.png)
+
 - On large screens the site is displayed as is, on devices with screens smaller than 826 pixels font is reduced and the left image and question area are displayed and the right is not.
+
+![The screenshot for screens less than 768px](https://juniva616.github.io/quiz/readme-files/md-768px.png)
+
 - On mobile phones and smartphones the order of images and videos changes from row to column, allowing the user to see them clearly.
+
+ ![The screenshot for mobile phones](https://juniva616.github.io/quiz/readme-files/md-412.png)
+
 - All changing pages of the site looks good and readable on all types of devices.
 
 Validation
@@ -109,8 +126,10 @@ CSS validation
 The CSS code has passed validation on https://jigsaw.w3.org/css-validator/ without any warnings or errors.
 
 
-LightHouse reports
+Lighthouse reports
 I have tested the site with LightHouse and here is the results.
+
+![The screenshot for Lighthouse report](https://juniva616.github.io/quiz/readme-files/md-litehouse.png)
 
 The site accessibility is 100, the same good results are for Performance, Best Practices and CEO.
 
