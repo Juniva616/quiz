@@ -7,7 +7,7 @@ const quizArray = [
     imgFile: '<img src="assets/images/lions.jpg" alt="Lions family">',
     textInfo: ' Lionesses, not male lions, do the majority of hunting for their pride. Lionesses hunt around 90 percent of the time, while the males protect their pride.',
   },
-  
+
   {
     statement: 'Roses and apples belong to the same family.',
     correctAnswer: true,
@@ -22,7 +22,7 @@ const quizArray = [
     textInfo: "Crabs intimidate other creatures with their claws, but also ghost crabs will growl at their enemies like a dog. The crabs make these fearsome noises using teeth located in their stomachs.",
 
   },
- 
+
   {
     statement: "The baobab tree can store  up to 120,000 liters of water in its trunk.",
     correctAnswer: true,
@@ -156,7 +156,7 @@ const quizArray = [
     textInfo: " Zebra stripes are as unique as fingerprints. The stripes help to camouflage, act as an identification signal for other zebras and as a sort of portable air conditioner. Also they are the best fly repellant, and the narrower the stripes, the better.",
   },
 
-]
+];
 
 //Waits for the DOM to finish loading before starting the quiz, listens to click on START button and runs function runQuiz().
 
@@ -229,7 +229,7 @@ function checkAnswers(userAnswer) {
       showQuestion(i);
     } else {
       congratulations();
-    };
+    }
   });
 }
 
@@ -256,5 +256,5 @@ function congratulations() {
   let correctScore = parseInt(document.getElementById("correct").innerText);
   document.getElementById('question').innerText = `Congratulations! You answered  ${correctScore} out of   ${quizArray.length} questions correctly! Well done! `;
   document.getElementById('button-area').innerHTML = "Thank you for your time!";
-   
+
 }

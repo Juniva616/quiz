@@ -1,10 +1,10 @@
-### Flora and Fauna Quiz
+# Flora and Fauna Quiz
 
  ![The quiz screenshot](https://juniva616.github.io/quiz/readme-files/md-quiz.png)
 
 This site is an online quiz devoted to the interesting facts about animals and plants. The purpose of the quiz is to entertain and educate children and adults loving nature of our mother Earth.
  
-# Features
+## Features
 - Responsive on all device sizes
 - Interactive elements
 - Easy navigation
@@ -20,7 +20,7 @@ This site is an online quiz devoted to the interesting facts about animals and p
 
 ### Header and the title
 
-The quiz takes one page with the background image which covers the header and footer and the bright title of the quiz - "Flora & Fauna", which attracts the attention of the user and gives a clear idea of the site's purpose.
+The quiz takes one page with the background image which covers the header and footer and the bright title of the quiz  "Flora & Fauna", which attracts the attention of the user and gives a clear idea of the site's purpose.
 
 ### The game area
 
@@ -33,6 +33,8 @@ On the smaller screens only the left image and the question area are visible.
  ![The screenshot for screens less than 768px](https://juniva616.github.io/quiz/readme-files/md-768px.png)
 
 The quiz starts with the welcoming message with explanations of the rules. It makes the users comfortable and gives clear and understandable directions what they should do to start the quiz.
+
+ ![The screenshot with the rules](https://juniva616.github.io/quiz/readme-files/md-rules.png)
 
 When the button START is pressed the statement with an interesting and little known fact about a plant or an animal appears in the central part of the page and the photo of the mentioned creature appears to the left. It makes a pleasant visual impression to the user.
 
@@ -53,17 +55,17 @@ When the quiz comes to the end the user is greeted by the message with the numbe
 The navigation on the site is represented by the buttons START, AGREE, DISAGREE and NEXT which is easy and intuitive. 
 
 ## Technologies Used
-## Languages Used
+### Languages Used
 - HTML5
 - CSS3
 - JavaScript
 
-## Sites & Programs Used
+### Sites & Programs Used
 - **VSCode:**
 VSCode was used for editing the code, commiting and pushing it to GitHub.
 
 - **Google Fonts:**
-Google fonts were used to import the 'Source Sans Pro' and 'Font Awesome 6' fonts into the style.css file which is used on all pages throughout the project.
+Google fonts were used to import the 'Source Sans Pro' and 'Ubuntu' fonts into the style.css file which is used on all pages throughout the project.
 
 - **favicon:**
 favicon.ico was made by the developer
@@ -78,17 +80,19 @@ GitHub is used to store the projects code after being pushed from Git and to dep
 Paint and Photos were used to create the logo, resizing images and editing photos for the website.
 
 - **The site https://ui.dev/amiresponsive**
+
 The site allowed to get a nice picture demonstrating how my site will look on different devices.
 
 - **Google Translate:**
-https://translate.google.com/
+
+https://translate.google.com/ was used for writing the content in English without mistakes.
 
 ## User Experience (UX)
 **As a First Time Visitor,** I want to easily understand the main purpose of the site and check my knowledge of flora and fauna of the Earth.
 - Upon entering the site, the user sees an nice green image with horses on the meadow stretching from the top to the bottom of the page and a clear information on how to start the quiz. 
 - The user  presses the button START and enjoys the quiz.
 - An interesting and little known fact on the screen makes the user to analize his knowledge 
-and take a decision if this fact is true and then press the button AGREE or this fact is false and press the button DISAGREE.
+and take a decision if this fact is true and then press the button AGREE or this fact is false and press the button DISAGREE, then to find out if the answer was correct or not.
 
 
 **As a First Time Visitor,** I want to be able to easily navigate through the quiz.
@@ -97,12 +101,12 @@ leads to the next page.
  
 **As a First Time Visitor,** I want to get a feedback after each my reply to the question to find out if I gave a correct answer.
 
-- The message "You are right!" or "You are wrong!" appears on the top of each page with the correct answer, which immidiately gives the user a feedback to his action.
+- The message "You are right!" or "You are wrong!" appears on the top of each page with the correct answer, which immidiately gives the user a feedback to his action. Also a detailed correct answer widens the knowledge of the user about flora and fauna.
  
  **As a First Time Visitor,** passing the quiz, I want to feel myself a winner.
- - When the user answers all the questions the message "Congratulations! You answered % out of % questions correctly! Well done!",   "Thank you for your time!", which leaves the user with a pleasant impression that he/she is a winner, he/she is valued and appreciated.
+ - When the user answers all the questions the message appears: "Congratulations! You answered % out of % questions correctly! Well done!",   "Thank you for your time!", which leaves the user with a pleasant impression that he/she is a winner, he/she is valued and appreciated.
 
-## Testing
+# Testing
 - The site has been tested in Chrome, Edge, Firefox and Opera and it works correctly in all browsers, all buttons work as intended.
 - The site is adapted to different screen sizes which is tested with DevTools (Responsive) and with a real notebook, smartphones and a tablet by me and my friends. 
 
@@ -112,34 +116,34 @@ leads to the next page.
 
 ![The screenshot for screens less than 768px](https://juniva616.github.io/quiz/readme-files/md-768px.png)
 
-- On mobile phones and smartphones the order of images and videos changes from row to column, allowing the user to see them clearly.
+- On mobile phones and smartphones the order of images and videos changes from row to column, allowing the user to see them clearly on one screen without scrolling.
 
  ![The screenshot for mobile phones](https://juniva616.github.io/quiz/readme-files/md-412.png)
 
-- All changing pages of the site looks good and readable on all types of devices.
+- All changing pages of the site look good and readable on all types of devices.
 
-Validation
-HTML validation
+## Validation
+### HTML validation
 The site has passed validation on https://validator.w3.org/ without any errors or warnings to show.
 
-CSS validation
+### CSS validation
 The CSS code has passed validation on https://jigsaw.w3.org/css-validator/ without any warnings or errors.
 
 
-Lighthouse reports
+### Lighthouse reports
 I have tested the site with LightHouse and here is the results.
 
 ![The screenshot for Lighthouse report](https://juniva616.github.io/quiz/readme-files/md-litehouse.png)
 
 The site accessibility is 100, the same good results are for Performance, Best Practices and CEO.
 
-Fixed bugs
+### Fixed bugs
+When I tested the quiz on screen sizes for mobile phones I noticed that the quiz took a few screens to scroll down to the score area. It was not comfortable for users, so I make the right image invisible on the small screens. It does not influence the functionality of the quiz and improves comfort of use.
  
- 
-Unfixed bugs
+### Unfixed bugs
 No unfixed bugs.
 
-Deployment
+## Deployment
 The site has been deployed to Pages on GitHub. For that I chose my project depository, went to Settings section, on the left bar chose Pages, in the Source section chose the option Branch: main, confirmed it with clicking the button Save and on the blue field the URL appeared where my project was deployed.
 
 The URL on GitHub with my project is https://github.com/Juniva616/quiz
