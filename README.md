@@ -12,7 +12,9 @@ This site is an online quiz devoted to the interesting facts about animals and p
 - Congratulations at the end of the quiz
 
 ## Existing features
+ ![The navigation bar screenshot](https://juniva616.github.io/milestone-1/readme-files/scr-navbar.png)
 
+![The header screenshot](https://juniva616.github.io/readme-files/md-header.png)
 ### Header and the title
 
 The quiz takes one page with the background image which covers the header and footer and the bright title of the quiz - "Flora & Fauna", which attracts the attention of the user and gives a clear idea of the site's purpose.
