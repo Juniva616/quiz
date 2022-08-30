@@ -121,6 +121,9 @@ leads to the next page.
 - All changing pages of the site look good and readable on all types of devices.
 
 ## Validation
+### JSHinter validation
+JavaScript code has passed through a linter (Jshint) with no errors and warnings.
+
 ### HTML validation
 The site has passed validation on https://validator.w3.org/ without any errors or warnings to show.
 
