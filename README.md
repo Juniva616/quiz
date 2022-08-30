@@ -79,12 +79,10 @@ GitHub is used to store the projects code after being pushed from Git and to dep
 - **Paint and Photos:**
 Paint and Photos were used to create the logo, resizing images and editing photos for the website.
 
-- **The site https://ui.dev/amiresponsive**
-
+- **The site https://ui.dev/amiresponsive :**  
 The site allowed to get a nice picture demonstrating how my site will look on different devices.
 
 - **Google Translate:**
-
 https://translate.google.com/ was used for writing the content in English without mistakes.
 
 ## User Experience (UX)
@@ -112,13 +110,13 @@ leads to the next page.
 
 ![The screenshot for different screen sizes](https://juniva616.github.io/quiz/readme-files/md-respons.png)
 
-- On large screens the site is displayed as is, on devices with screens smaller than 826 pixels font is reduced and the left image and question area are displayed and the right is not.
+- On large screens the site is displayed as is, on devices with screens smaller than 828 pixels the font is reduced and the left image and question area are displayed and the right image is not.
 
-![The screenshot for screens less than 768px](https://juniva616.github.io/quiz/readme-files/md-768px.png)
+![The screenshot for screens less than 828px](https://juniva616.github.io/quiz/readme-files/md-768px.png)
 
 - On mobile phones and smartphones the order of images and videos changes from row to column, allowing the user to see them clearly on one screen without scrolling.
 
- ![The screenshot for mobile phones](https://juniva616.github.io/quiz/readme-files/md-412.png)
+ ![The screenshot for mobile phones 640px wide and less](https://juniva616.github.io/quiz/readme-files/md-412.png)
 
 - All changing pages of the site look good and readable on all types of devices.
 
@@ -135,7 +133,7 @@ I have tested the site with LightHouse and here is the results.
 
 ![The screenshot for Lighthouse report](https://juniva616.github.io/quiz/readme-files/md-litehouse.png)
 
-The site accessibility is 100, the same good results are for Performance, Best Practices and CEO.
+The site Accessibility is 100, the same good results are for Performance, Best Practices and CEO.
 
 ### Fixed bugs
 When I tested the quiz on screen sizes for mobile phones I noticed that the quiz took a few screens to scroll down to the score area. It was not comfortable for users, so I make the right image invisible on the small screens. It does not influence the functionality of the quiz and improves comfort of use.
@@ -154,25 +152,35 @@ The live link to my project is https://juniva616.github.io/quiz/
 ### Code
 The minor fragments of CSS code was taken as a sample (with further adjustmens to the project's needs) from different educational sites, tutorials and developer community sites, which is commented in the code.
 I express my gratitude to the following sites and people who offered the solutions to the problems I faced during the project making:
-https://www.w3schools.com/
-https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/
-https://stackoverflow.com/
-https://developer.mozilla.org/
 
+https://www.w3schools.com/
+
+https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/
+
+https://stackoverflow.com/
+
+https://developer.mozilla.org/
 
  
 ## Content
 - The text content was taken from open resources on the following sites:
+
  https://crazycrittersinc.com/over-50-amazing-plant-facts/     
- https://animalmedical.org/fun-facts    
+
+ https://animalmedical.org/fun-facts   
+
  https://bestlifeonline.com/animal-facts/ 
+
  https://www.floweraura.com/blog/amazing-funny-interesting-facts-about-plants
      
 - The free images were taken from:
+
  https://www.pexels.com/
+
  https://www.wikipedia.org/
 
 ## Acknowledgements
+
 My Mentor for continuous helpful feedback.
 
 Code Institute for their perfect detailed lessons and support.
