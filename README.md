@@ -2,7 +2,7 @@
 
  ![The quiz screenshot](https://juniva616.github.io/quiz/readme-files/md-quiz.png)
 
-This site is an online quiz devoted to the interesting facts about animals and plants. The purpose of the quiz is to entertain and educate children and adults loving nature of our mother Earth.
+This site is an online quiz devoted to the interesting facts about animals and plants. The purpose of the quiz is to entertain and educate children and adults loving nature of our Mother Earth.
  
 ## Features
 - Responsive on all device sizes
@@ -18,7 +18,7 @@ This site is an online quiz devoted to the interesting facts about animals and p
   
 ![The header screenshot](https://juniva616.github.io/quiz/readme-files/md-header.png)
 
-### Header and the title
+### The header and the title
 
 The quiz takes one page with the background image which covers the header and footer and the bright title of the quiz  "Flora & Fauna", which attracts the attention of the user and gives a clear idea of the site's purpose.
 
@@ -58,7 +58,7 @@ The navigation on the site is represented by the buttons START, AGREE, DISAGREE 
 ### Languages Used
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript ES6
 
 ### Sites & Programs Used
 - **VSCode:**
@@ -68,7 +68,7 @@ VSCode was used for editing the code, commiting and pushing it to GitHub.
 Google fonts were used to import the 'Source Sans Pro' and 'Ubuntu' fonts into the style.css file which is used on all pages throughout the project.
 
 - **favicon:**
-favicon.ico was made by the developer
+favicon.ico allowed to place the tab icon of the site. The icon image is created by the developer. 
 
 - **Git:**
 Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
@@ -83,7 +83,7 @@ Paint and Photos were used to create the logo, resizing images and editing photo
 The site allowed to get a nice picture demonstrating how my site will look on different devices.
 
 - **Google Translate:**
-https://translate.google.com/ was used for writing the content in English without mistakes.
+https://translate.google.com/ was used for writing the content in English without grammar mistakes.
 
 ## User Experience (UX)
 **As a First Time Visitor,** I want to easily understand the main purpose of the site and check my knowledge of flora and fauna of the Earth.
@@ -139,7 +139,9 @@ I have tested the site with LightHouse and here is the results.
 The site Accessibility is 100, the same good results are for Performance, Best Practices and CEO.
 
 ### Fixed bugs
-When I tested the quiz on screen sizes for mobile phones I noticed that the quiz took a few screens to scroll down to the score area. It was not comfortable for users, so I make the right image invisible on the small screens. It does not influence the functionality of the quiz and improves comfort of use.
+- When I tested the quiz on screen sizes for mobile phones I noticed that the quiz took a few screens to scroll down to the score area. It was not comfortable for users, so I make the right image invisible on the small screens. It does not influence the functionality of the quiz and improves comfort of use.
+- Also  I noticed that for the screen sizes less than 640px the image was not centered. I fixed this problem adding the css rule with
+ display: grid and  place-items: center.
  
 ### Unfixed bugs
 No unfixed bugs.
@@ -163,10 +165,9 @@ https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/
 https://stackoverflow.com/
 
 https://developer.mozilla.org/
-
  
 ## Content
-- The text content was taken from open resources on the following sites:
+- The text content was taken from open sources on the following sites:
 
  https://crazycrittersinc.com/over-50-amazing-plant-facts/     
 

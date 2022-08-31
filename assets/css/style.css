@@ -73,11 +73,9 @@ h2 {
     cursor: pointer;
     box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
 }
-
 /* The end of the code from outer source */
 
 /*  flex-container idea is taken from  https://www.w3schools.com/ and adjusted to the project needs*/
-
 .flex-container {
     display: flex;
     background-color: floralwhite;
@@ -92,7 +90,6 @@ h2 {
     font-size: 200%;
     align-self: center;
 }
-
 /*  The end of the code from outer source */
 
 .question-area {
@@ -145,10 +142,6 @@ h2 {
     color: yellow;
     padding: 20px;
 }
-
-
-
-
 
 /* Media queries  for the screen less than 1160px */
 @media (max-width: 1160px) {
@@ -203,20 +196,19 @@ h2 {
         cursor: pointer;
         box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
     }
-
 }
 
 /* Media queries  for the screen less than 828px */
 @media (max-width: 828px) {
 
     .flex-container {
+
         flex-direction: row;
     }
 
     .flex-container>div {
-        flex-direction: column;
-        font-size: 140%;
 
+        font-size: 140%;
     }
 
     #left-images {
@@ -230,8 +222,6 @@ h2 {
         display: none;
     }
 }
-
-
 
 /* Media queries  for the screen less than 640px */
 @media (max-width: 640px) {
@@ -254,16 +244,14 @@ h2 {
         justify-items: center;
     }
 
-    #left-images {
-        padding: 5px;
-        align-items: center;
-    }
-    
-    #left-images>img {
-        align-self: center;
-        justify-self:  center;
-    }
+    /* The script from outer resource  https://www.freecodecamp.org/ */ 
+  #left-images {
 
+        display: grid;
+        place-items: center;
+          }
+   /*  The end of the script from outer resource */ 
+    
     #right-images {
         display: none;
     }
