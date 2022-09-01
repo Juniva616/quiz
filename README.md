@@ -124,6 +124,16 @@ leads to the next page.
 ### JSHinter validation
 JavaScript code has passed through a linter (Jshint) with no errors and warnings.
 
+The following Metrics were returned:
+
+ * There are 9 functions in this file.
+
+ * Function with the largest signature take 1 arguments, while the median is 0.
+
+* Largest function has 10 statements in it, while the median is 3.
+
+* The most complex function has a cyclomatic complexity value of 2 while the median is 1.
+
 ### HTML validation
 The site has passed validation on https://validator.w3.org/ without any errors or warnings to show.
 
@@ -150,6 +160,10 @@ The site was deployed to Pages on GitHub with the following steps:
 5. The page will automatically refresh. If it does not, refresh the page.
 6. The link to just published site will appear on the blue field.
 
+The URL on GitHub with my project is https://github.com/Juniva616/quiz
+
+The live link to my project is https://juniva616.github.io/quiz/
+
 ## Forking the GitHub Repository
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
@@ -168,10 +182,6 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 ` $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY `
 
 7. Press Enter. Your local clone will be created.
-
-The URL on GitHub with my project is https://github.com/Juniva616/quiz
-
-The live link to my project is https://juniva616.github.io/quiz/
 
 ## Credits
 ### Code
