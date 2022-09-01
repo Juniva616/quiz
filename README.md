@@ -122,9 +122,9 @@ leads to the next page.
 
 ## Validation
 ### JSHinter validation
-JavaScript code has passed through a linter (Jshint) with no errors and warnings.
+JavaScript code has passed through a linter (Jshint implemented to VSCode) with no errors and warnings.
 
-The following Metrics were returned:
+The following Metrics were returned by https://jshint.com:
 
  * There are 9 functions in this file.
 
