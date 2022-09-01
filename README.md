@@ -83,9 +83,9 @@ Paint and Photos were used to create the logo, resizing images and editing photo
 The site allowed to get a nice picture demonstrating how my site will look on different devices.
 
 - **Google Translate:**
-https://translate.google.com/ was used for writing the content in English without grammar mistakes.
+https://translate.google.com/  
 
-## User Experience (UX)
+## User Stories  
 **As a First Time Visitor,** I want to easily understand the main purpose of the site and check my knowledge of flora and fauna of the Earth.
 - Upon entering the site, the user sees an nice green image with horses on the meadow stretching from the top to the bottom of the page and a clear information on how to start the quiz. 
 - The user  presses the button START and enjoys the quiz.
@@ -138,16 +138,36 @@ I have tested the site with LightHouse and here is the results.
 
 The site Accessibility is 100, the same good results are for Performance, Best Practices and CEO.
 
-### Fixed bugs
-- When I tested the quiz on screen sizes for mobile phones I noticed that the quiz took a few screens to scroll down to the score area. It was not comfortable for users, so I make the right image invisible on the small screens. It does not influence the functionality of the quiz and improves comfort of use.
-- Also  I noticed that for the screen sizes less than 640px the image was not centered. I fixed this problem adding the css rule with
- display: grid and  place-items: center.
- 
-### Unfixed bugs
+ ### Unfixed bugs
 No unfixed bugs.
 
 ## Deployment
-The site has been deployed to Pages on GitHub. For that I chose my project depository, went to Settings section, on the left bar chose Pages, in the Source section chose the option Branch: main, confirmed it with clicking the button Save and on the blue field the URL appeared where my project was deployed.
+The site was deployed to Pages on GitHub with the following steps:
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "Pages" Section on the left side.
+4. Under "Source" chose the option "Branch: main", confirm  it with clicking the button "Save".
+5. The page will automatically refresh. If it does not, refresh the page.
+6. The link to just published site will appear on the blue field.
+
+## Forking the GitHub Repository
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+## Making a Local Clone
+1. Log in to GitHub and locate the GitHub Repository
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in Step 3.
+
+` $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY `
+
+7. Press Enter. Your local clone will be created.
 
 The URL on GitHub with my project is https://github.com/Juniva616/quiz
 
